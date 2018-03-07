@@ -8,79 +8,7 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
-
-
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-
-        li {
-          list-style-type: none;
-          background-color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -91,21 +19,21 @@
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="moccus" style="height:56px" > chatter|app</h1>
 
 <!-- #1 #channels #topics -->
+<div id="channellist">
 <ul>
-
-
 <li>#Yummy <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></li>
-<li>#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></li>
+<li id="actual">#SevenContinents <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></li>
 <li>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></li>
 <li>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"></li>
 <li>#Octoberfest<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="star"></li>
 </ul>
-<!-- #1 #channels #buttons -->
-<div style="background-color:white">
 
-<button> <img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb"> new </button>
-<button> <img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"> trending</button>
-<button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star">  favorites</button>
+<!-- #1 #channels #buttons -->
+<span>
+<button class="buttons" id="selected"> <img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb"> <br>  new </button>
+<button class="buttons"> <img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"> <br />  trending</button>
+<button class="buttons"> <img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="star"> <br />  favorites</button>
+</span>
 </div>
 
 <!-- chat area -->
@@ -127,11 +55,11 @@
     <em>15 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
-<p>What's the place you folks call home?</p>
+<div class="message">
+<p class="messagetext">What's the place you folks call home?</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -142,11 +70,11 @@
     <em>4 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
-<p>BRISBANE! Hang loose!</p>
+<div class="message">
+<p class="messagetext">BRISBANE! Hang loose!</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -157,11 +85,11 @@
     <em>12 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
-<p>The big apple.</p>
+<div class="message">
+<p class="messagetext">The big apple.</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -172,12 +100,12 @@
     <em>7 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
+<div class="message">
 
-<p>Eu sou um Carocas.</p>
+<p class="messagetext">Eu sou um Carocas.</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
@@ -188,11 +116,11 @@
     <em>14 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
-<p>Greetings from the western cape!</p>
+<div class="message">
+<p class="messagetext">Greetings from the western cape!</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
 <h3>
@@ -203,11 +131,11 @@
     <em>15 min. left</em>
 </h3>
 <!-- #1 #chat #messages depict a short fictional chat-->
-<div style="width:80%">
-<p>北京</p>
+<div class="message">
+<p class="messagetext">北京</p>
 </div>
 <!-- #1 #chat #button subsequent to each message -->
-<button>+5 min.</button>
+<button class="buttonstext">+5 min.</button>
 
 </body>
 </html>
